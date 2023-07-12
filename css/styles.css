@@ -9,8 +9,49 @@
   --secondary-background-color: #f7f7f7;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .list {
@@ -22,6 +63,7 @@ body {
 }
 
 .top-text {
+  margin-bottom: 20px;
   font-size: 11px;
   font-style: normal;
   font-weight: 600;
@@ -31,6 +73,7 @@ body {
 }
 
 .bottom-text {
+  margin-bottom: 20px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -39,6 +82,7 @@ body {
 }
 
 .section-title {
+  margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-size: 42px;
   font-style: normal;
@@ -48,6 +92,9 @@ body {
 }
 
 .button {
+  border-radius: 25px;
+  border: 1px solid var(--primary-orange-color);
+  padding: 5px 10px;
   font-family: inherit;
   font-size: 12px;
   font-style: normal;
