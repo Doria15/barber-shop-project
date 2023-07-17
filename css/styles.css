@@ -38,7 +38,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  border: 2px solid red;
 }
 
 .visually-hidden {
@@ -52,6 +51,10 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section {
+  padding: 120px 0;
 }
 
 .list {
@@ -104,17 +107,34 @@ body {
   text-transform: uppercase;
 }
 
+.button:hover {
+  background-color: var(--primary-orange-color);
+  border: 1px solid var(--primary-orange-color);
+  color: var(--primary-white-color);
+}
+
 .header {
+  padding-top: 32px;
   background-color: var(--primary-background-color);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-navigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
+  margin-right: 130px;
 }
 
 .header-list {
+  display: flex;
+  gap: 30px;
 }
 
 .header-item {
@@ -136,6 +156,7 @@ body {
 
 .header-address {
   color: var(--primary-white-color);
+  margin-left: auto;
 }
 
 .header-address-link {
@@ -151,10 +172,20 @@ body {
 .header-button {
   color: var(--primary-white-color);
   background-color: transparent;
+  margin-left: 40px;
 }
 
 .hero {
   background-color: var(--primary-background-color);
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-wrap {
+  flex-grow: 1;
+  padding: 272px 100px 208px;
 }
 
 .hero-list {
@@ -199,10 +230,21 @@ body {
   background-color: var(--primary-white-color);
 }
 
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 
 .about-item {
+}
+
+.about-wrap {
+  padding-right: 100px;
 }
 
 .about-top-text {
@@ -224,6 +266,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.28px;
+  margin-bottom: 52px;
 }
 
 .about-button {
@@ -241,10 +284,25 @@ body {
   color: var(--primary-white-color);
 }
 
+.prices-wrap {
+  display: flex;
+  margin-bottom: 50px;
+}
+
 .prices-list {
+  border: 1px solid var(--primary-white-color);
+  padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -259,16 +317,33 @@ body {
 .prices-button {
   color: var(--primary-white-color);
   background-color: transparent;
+  display: block;
+  margin: 0 auto;
 }
 
 .benefits {
   background-color: var(--primary-white-color);
 }
 
+.benefits-container {
+  display: flex;
+  padding-left: 85px;
+  gap: 130px;
+}
+
 .benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefits-item {
+  background-color: var(--secondary-background-color);
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  text-align: center;
 }
 
 .benefits-item-count {
@@ -314,9 +389,16 @@ body {
 }
 
 .barbers-list {
+  display: flex;
+}
+
+.barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .barbers-item-title {
+  margin-top: 30px;
+  margin-bottom: 8px;
   color: var(--primary-black-color);
   text-align: center;
   font-size: 18px;
@@ -327,6 +409,7 @@ body {
 }
 
 .barbers-item-text {
+  margin-bottom: 30px;
   color: var(--primary-orange-color);
   text-align: center;
   font-size: 14px;
@@ -345,9 +428,18 @@ body {
 }
 
 .portfolio-list {
+  display: flex;
 }
 
 .portfolio-item {
+  width: calc((100% - 90px) / 4);
+}
+.contacts-wrap {
+  background-color: #191c26;
+}
+
+.contacts-wrap-container {
+  display: flex;
 }
 
 .booking {
@@ -395,6 +487,13 @@ body {
 
 .footer {
   background-color: var(--secondary-background-color);
+  padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-copyright {
@@ -407,6 +506,8 @@ body {
 }
 
 .footer-list {
+  display: flex;
+  gap: 30px;
 }
 
 .footer-item {
