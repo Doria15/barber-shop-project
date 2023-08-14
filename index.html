@@ -243,7 +243,7 @@
           </ul>
           <div class="benefits-wrap">
             <p class="benefits-top-text top-text">Old school</p>
-            <h2 class="benefits-title section-title">
+            <h2 class="benefits-title section-title" data-aos="fade-right">
               Why do they come to us?
             </h2>
             <p class="benefits-bottom-text bottom-text">
@@ -516,6 +516,45 @@
           <!-- BOOKING SECTION -->
           <section class="booking">
             <h2 class="booking-title section-title">Book a Service</h2>
+            <form name="booking-form">
+              <div class="booking-wrap">
+                <!-- Name -->
+                <label class="booking-field">
+                  <input
+                    class="booking-input"
+                    type="text"
+                    name="booking-name"
+                    placeholder="John Doe"
+                    required
+                  />
+                  <span class="booking-label">Name*</span>
+                </label>
+
+                <!-- Phone -->
+                <label class="booking-field">
+                  <input
+                    class="booking-input"
+                    type="tel"
+                    name="booking-name"
+                    placeholder="09-123-456-789"
+                    required
+                    pattern="^(09|\+639)\d{9}$"
+                  />
+                  <span class="booking-label">Phone*</span>
+                </label>
+              </div>
+              <label class="booking-field">
+                <textarea
+                  class="booking-textarea"
+                  name="booking-message"
+                  rows="8"
+                  placeholder="What's on your thoughts?"
+                ></textarea>
+                <span class="booking-label">Message</span>
+              </label>
+
+              <button class="button booking-button" type="submit">Send</button>
+            </form>
           </section>
 
           <!-- CONTACTS SECTION -->
@@ -608,6 +647,65 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form name="modal-form">
+          <!-- Name -->
+          <label class="form-field">
+            <span class="form-label">Name</span>
+            <input class="form-input" type="text" name="user-name" required />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-name"></use>
+            </svg>
+          </label>
+
+          <!-- Phone -->
+          <label class="form-field">
+            <span class="form-label">Phone</span>
+            <input class="form-input" type="tel" name="user-phone" required />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+
+          <!-- Email -->
+          <label class="form-field">
+            <span class="form-label">Email</span>
+            <input class="form-input" type="email" name="user-email" required />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <!--  Comments -->
+          <label class="form-field">
+            <span class="form-label">Comments</span>
+            <textarea
+              class="form-textarea"
+              name="user-feedback"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <!-- Terms and Privacy Policy -->
+          <label class="form-agreement">
+            <input
+              class="form-checkbox visually-hidden"
+              type="checkbox"
+              name="user-terms"
+            />
+            <svg class="form-checkbox-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-checkbox"></use>
+            </svg>
+            <span
+              >I accept the terms and conditions of the
+              <a class="form-terms" href="">Privacy Policy</a></span
+            >
+          </label>
+
+          <!-- Form Button -->
+          <button class="button button-center" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

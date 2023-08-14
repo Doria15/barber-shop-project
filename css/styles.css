@@ -624,6 +624,72 @@ body {
 
 .booking-title {
   color: var(--primary-white-color);
+  margin-bottom: 40px;
+}
+
+.booking-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-field {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.booking-input,
+.booking-textarea {
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  color: var(--primary-white-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.booking-input {
+  width: 270px;
+  height: 24px;
+}
+
+.booking-label {
+  position: absolute;
+  top: -10px;
+  color: var(--primary-gray-color);
+  font-weight: 600px;
+  font-size: 11px;
+  line-height: 0.87;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.booking-input:not(:placeholder-shown) + .booking-label,
+.booking-input:focus + .booking-label,
+.booking-textarea:not(:placeholder-shown) + .booking-label,
+.booking-textarea:focus + .booking-label {
+  transform: translateY(-100%);
+}
+
+.booking-input::placeholder,
+.booking-textarea::placeholder {
+  font-size: 10px;
+  color: var(--primary-white-color);
+}
+
+.booking-textarea {
+  width: 100%;
+  resize: none;
+  margin-bottom: 40px;
+}
+
+.booking-button {
+  color: var(--primary-white-color);
+  background-color: transparent;
+  padding: 12px 38px;
 }
 
 .contacts {
@@ -734,6 +800,7 @@ body {
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -766,7 +833,8 @@ body {
   border-radius: 15px;
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -775,11 +843,114 @@ body {
 
 .modal-close:hover,
 .modal-close:focus {
-  color: var(--primary-orange-color);
+  color: var(--primary-white-color);
+  background-color: var(--primary-orange-color);
 }
 
 .is-hidden {
   visibility: none;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--primary-black-color);
+  margin-bottom: 30px;
+}
+
+.form-field {
+  display: block;
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  line-height: 0.87;
+  letter-spacing: 0.01em;
+}
+
+.form-input,
+.form-textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 29px;
+  padding: 11px 16px 11px 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  line-height: 0.87;
+  letter-spacing: 0.01em;
+  color: var(--primary-black-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea {
+  padding-left: 16px;
+  resize: none;
+}
+
+.form-input:hover,
+.form-textarea:hover,
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-orange-color);
+}
+
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--primary-black-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--primary-orange-color);
+}
+
+.form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.form-checkbox-icon {
+  fill: none;
+  border: 2px solid var(--primary-gray-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox:checked + .form-checkbox-icon {
+  background-color: var(--primary-orange-color);
+  border-color: var(--primary-orange-color);
+  fill: var(--primary-white-color);
+}
+
+.form-terms {
+  color: var(--primary-orange-color);
+}
+
+.button-center {
+  display: block;
+  margin: auto;
+  background-color: transparent;
 }
